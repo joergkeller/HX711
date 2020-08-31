@@ -23,7 +23,7 @@
 // fast CPU and so should slow down sampling from GPIO.
 #define FAST_CPU \
     ( \
-    ARCH_ESPRESSIF || \
+    ARCH_ESPRESSIF || defined(__ASR6501__) || \
     defined(ARDUINO_ARCH_SAM)     || defined(ARDUINO_ARCH_SAMD) || \
     defined(ARDUINO_ARCH_STM32)   || defined(TEENSYDUINO) \
     )
